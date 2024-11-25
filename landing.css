@@ -1,13 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
 }
 
 header h1 {
+  margin: 0;
   font-size: 24px;
 }
 
@@ -15,6 +23,7 @@ nav a {
   margin: 0 10px;
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 
 nav a:hover {
@@ -22,10 +31,18 @@ nav a:hover {
 }
 
 .food-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
   padding: 20px;
+}
+
+.food-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .food-item {
@@ -44,12 +61,18 @@ nav a:hover {
 
 .food-item h3 {
   margin: 10px 0;
+  font-size: 20px;
+}
+
+.food-item p {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 button {
   background-color: #28a745;
   color: #fff;
-  padding: 10px;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -57,4 +80,12 @@ button {
 
 button:hover {
   background-color: #218838;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
