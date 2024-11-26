@@ -8,13 +8,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn = new mysqli("localhost", "root", "", "UserAuth");
 
+    // Check connection
+    if ($conn->connect_error) {
+        echo json_encode(["status" => "error", "message" => "Database connection failed."]);
+        exit();
+    }
+
     // Add item to cart
     $query = "INSERT INTO cart (user_id, food_id, quantity) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("iii", $user_id, $food_id, $quantity);
-    $stmt->execute();
 
-    header("Location: cart.php");
+    if ($stmt->execute()) {
+        echo json_encode(["status" => "success", "message" => "Item added to cart successfully!"]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Failed to add item to cart."]);
+    }
+
+    $stmt->close();
+    $conn->close();
     exit();
 }
 ?>

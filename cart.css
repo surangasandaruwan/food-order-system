@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  margin-bottom: 20px;
+  color: #0073e6;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+table th {
+  background-color: #0073e6;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table td {
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+table td button {
+  padding: 8px 12px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+table td button:hover {
+  background-color: #e60000;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav a {
+    font-size: 0.9rem;
+  }
+}
