@@ -3,12 +3,12 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #121212; /* Dark background for body */
+  color: #e0e0e0; /* Light text color for readability */
 }
 
 header {
-  background-color: #0073e6;
+  background-color: #1f1f1f; /* Dark header background */
   color: #fff;
   padding: 20px;
   display: flex;
@@ -49,14 +49,14 @@ main {
   max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
-  background: #fff;
+  background: #1e1e1e; /* Dark background for main content */
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .food-list h2 {
   text-align: center;
-  color: #0073e6;
+  color: #0073e6; /* Blue heading for food section */
   margin-bottom: 20px;
   font-size: 1.6rem;
 }
@@ -68,18 +68,18 @@ main {
 }
 
 .food-item {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #2c2c2c; /* Dark background for food items */
+  border: 1px solid #444; /* Slightly lighter border */
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .food-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 .food-item img {
@@ -92,19 +92,19 @@ main {
 
 .food-item h3 {
   margin: 10px 0;
-  color: #333;
+  color: #e0e0e0; /* Lighter text for food item title */
   font-size: 1.2rem;
 }
 
 .food-item p {
-  color: #0073e6;
+  color: #4caf50; /* Green color for food description */
   font-size: 1rem;
   margin-bottom: 15px;
 }
 
 /* Add to Cart Button */
 .add-to-cart-button {
-  background-color: #28a745;
+  background-color: #28a745; /* Green button */
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -116,14 +116,14 @@ main {
 }
 
 .add-to-cart-button:hover {
-  background-color: #218838;
+  background-color: #218838; /* Darker green on hover */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #333;
+  background-color: #1f1f1f; /* Dark footer background */
   color: #fff;
   margin-top: 30px;
 }
