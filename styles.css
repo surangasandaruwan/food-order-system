@@ -1,126 +1,117 @@
+/* General body styling with a dark gradient background */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(
+    135deg,
+    #333333,
+    #1c1c1c,
+    #121212,
+    #444444,
+    #222222
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+  color: #ffffff;
 }
 
+/* Animation for background gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Center the form */
 .form-container {
-  width: 300px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Landing page */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-}
-
-header h1 {
-  font-size: 24px;
-}
-
-nav a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.food-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.food-item {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.food-item img {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  padding: 2.5rem 2rem;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Darker shadow for contrast */
+  max-width: 400px;
   width: 100%;
+  text-align: center;
+}
+
+/* Form title styling */
+form h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Image container styling */
+.image-container {
+  margin-bottom: 30px;
+}
+
+.food-image {
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.food-item h3 {
-  margin: 10px 0;
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-button {
-  background-color: #28a745;
-  color: #fff;
-  padding: 10px;
-  border: none;
+.btn {
+  background: linear-gradient(
+    135deg,
+    #ff6f61,
+    #ff3e3a
+  ); /* Warm gradient from red to orange */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  margin-top: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-button:hover {
-  background-color: #218838;
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #ddd;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  form h2 {
+    font-size: 1.8rem;
+  }
+
+  form input,
+  form button {
+    font-size: 0.9rem;
+  }
 }
