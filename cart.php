@@ -29,7 +29,7 @@ $result = $stmt->get_result();
     <header>
         <h1>Your Cart</h1>
         <nav>
-            <a href="landing.php">Home</a>
+            <a href="store.php">Home</a>
             <a href="logout.php">Logout</a>
         </nav>
     </header>

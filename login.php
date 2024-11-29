@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Login successful, set session variables
             $_SESSION['user_id'] = $user['id'];  // Store user ID in session
             $_SESSION['username'] = $user['username'];  // Store username in session
-            header("Location: landing.php");  // Redirect to landing.php
+            header("Location: store.php");  // Redirect to landing.php
             exit();
         } else {
             echo "Invalid password.";

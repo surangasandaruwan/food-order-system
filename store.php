@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Store</title>
-    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="store.css">
 </head>
 <body>
     <header>
         <h1>Welcome to the Food Store</h1>
         <nav>
+            <!-- Apply the logout-button class to the logout link -->
             <a href="cart.php" class="cart-button">Cart</a>
-            <a href="logout.php">Logout</a>
+            <a href="logout.php" class="logout-button">Logout</a>
+            
         </nav>
     </header>
 

@@ -14,34 +14,48 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow header items to wrap on smaller screens */
 }
 
 header h1 {
   margin: 0;
   font-size: 1.8rem;
+  flex: 1; /* Allow header to adapt to different screen sizes */
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure the nav links wrap on small screens */
 }
 
 header nav a {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set text color to white */
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 20px;
 }
 
 header nav a.cart-button {
-  background-color: #ff9900;
+  background-color: #ffcc00; /* Yellow color for cart button */
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 header nav a.cart-button:hover {
-  background-color: #cc7a00;
+  background-color: #e6b800; /* Slightly darker yellow on hover */
 }
 
-header nav a:hover {
-  text-decoration: underline;
+header nav a.logout-button {
+  background-color: #ff4d4d; /* Red color for logout button */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a.logout-button:hover {
+  background-color: #e60000; /* Darker red on hover */
 }
 
 /* Food Section */
@@ -55,7 +69,7 @@ main {
 }
 
 .food-list h2 {
-  text-align: center;
+  text-align: center; /* Center the "Available Foods" header */
   color: #0073e6; /* Blue heading for food section */
   margin-bottom: 20px;
   font-size: 1.6rem;
@@ -138,7 +152,79 @@ footer p {
     font-size: 0.9rem;
   }
 
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  header nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .food-list h2 {
+    font-size: 1.4rem;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr 1fr; /* Two items per row on smaller screens */
+  }
+
+  .food-item {
+    padding: 15px;
+  }
+
   .food-item img {
-    height: 120px;
+    height: 120px; /* Smaller images for mobile */
+  }
+
+  .food-item h3 {
+    font-size: 1rem;
+  }
+
+  .food-item p {
+    font-size: 0.9rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive for smaller screens (up to 480px) */
+@media (max-width: 480px) {
+  .food-grid {
+    grid-template-columns: 1fr; /* One item per row on very small screens */
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .food-item {
+    padding: 12px;
+  }
+
+  .food-item img {
+    height: 100px; /* Further reduce image size for very small screens */
+  }
+
+  .food-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .food-item p {
+    font-size: 0.8rem;
+  }
+
+  .add-to-cart-button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
   }
 }
